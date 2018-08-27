@@ -1,0 +1,61 @@
+[emotes]
+# Emojis
+BEER = "🍺"
+BEER_TOAST = "🍻"
+FACE_CUTE_SMILE = "😊"
+FACE_HEART_EYES = "😍"
+FACE_JOY = "😂"
+FACE_SWEAT_SMILE = "😅"
+FACE_THINKING = "🤔"
+FIRE = "🔥"
+FLAG_CA = "🇨🇦"
+FLAG_US = "🇺🇸"
+HAND_CLAP = "👏"
+HAND_HORNS = "🤘"
+HAND_OK = "👌"
+HAND_THUMB_DOWN = "👎"
+HAND_THUMB_UP = "👍"
+HAND_WAVE = "👋"
+HEART = "❤️"
+MAPLE_LEAF = "🍁"
+POOP = "💩"
+TADA = "🎉"
+
+# Emoticons, but fancier
+ANGRY_TABLE_FLIP = "(ノಠ痊ಠ)ノ彡┻━┻"
+CELEBRATORY_GLITTER = "+｡:.ﾟヽ(´∀｡)ﾉﾟ.:｡+ﾟﾟ+｡:.ﾟヽ(*´∀)ﾉﾟ.:｡+ﾟ"
+SHRUGGIE = '¯\_(ツ)_/¯'
+TABLE_FLIP = "(╯°□°）╯︵ ┻━┻"
+
+[mappings]
+br = "BEER"
+brt = "BEER_TOAST"
+
+cel = "CELEBRATORY_GLITTER"
+
+fcs = "FACE_CUTE_SMILE"
+fhe = "FACE_HEART_EYES"
+fj = "FACE_JOY"
+fss = "FACE_SWEAT_SMILE"
+
+fir = "FIRE"
+
+fca = "FLAG_CA"
+fus = "FLAG_US"
+
+hcl = "HAND_CLAP"
+hor = "HAND_HORNS"
+ho = "HAND_OK"
+htd = "HAND_THUMB_DOWN"
+htu = "HAND_THUMB_UP"
+hw = "HAND_WAVE"
+
+he = "HEART"
+ml = "MAPLE_LEAF"
+poo = "POOP"
+tad = "TADA"
+
+atf = "ANGRY_TABLE_FLIP"
+tf = "TABLE_FLIP"
+
+shr = "SHRUGGIE"
