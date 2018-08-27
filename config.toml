@@ -24,7 +24,7 @@ TADA = "🎉"
 # Emoticons, but fancier
 ANGRY_TABLE_FLIP = "(ノಠ痊ಠ)ノ彡┻━┻"
 CELEBRATORY_GLITTER = "+｡:.ﾟヽ(´∀｡)ﾉﾟ.:｡+ﾟﾟ+｡:.ﾟヽ(*´∀)ﾉﾟ.:｡+ﾟ"
-SHRUGGIE = '¯\_(ツ)_/¯'
+SHRUGGIE = "¯\\_(ツ)_/¯"
 TABLE_FLIP = "(╯°□°）╯︵ ┻━┻"
 
 [mappings]
