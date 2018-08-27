@@ -23,7 +23,7 @@ fn main() {
     config_file.read_to_string(&mut config_file_str).unwrap();
     let decoded: Config = toml::from_str(&config_file_str).unwrap();
 
-    println!("#define IBUS_MACRO(z) {{SEND_STRING(SS_LCTRL(\"U\")); SEND_STRING(z\"\\n\")}}");
+    println!("#define IBUS_MACRO(z) {{SEND_STRING(SS_LCTRL(\"U\")); SEND_STRING(z\"\\n\");}}");
 
     for (name, emote) in decoded.emotes {
         let codepoint_map = emote.chars().map(|em| {
@@ -46,10 +46,10 @@ fn main() {
     let mut len_func_mappings: HashMap<usize, String> = HashMap::new();
 
     len_func_mappings.insert(1, "SEQ_ONE_KEY(KC_{key_1})".to_string());
-    len_func_mappings.insert(2, "SEQ_TWO_KEY(KC_{key_1}, KC_{key_2})".to_string());
-    len_func_mappings.insert(3, "SEQ_THREE_KEY(KC_{key_1}, KC_{key_2}, KC_{key_3})".to_string());
-    len_func_mappings.insert(4, "SEQ_FOUR_KEY(KC_{key_1}, KC_{key_2}, KC_{key_3}, KC_{key_4})".to_string());
-    len_func_mappings.insert(5, "SEQ_FIVE_KEY(KC_{key_1}, KC_{key_2}, KC_{key_3}, KC_{key_4}, KC_{key_5})".to_string());
+    len_func_mappings.insert(2, "SEQ_TWO_KEYS(KC_{key_1}, KC_{key_2})".to_string());
+    len_func_mappings.insert(3, "SEQ_THREE_KEYS(KC_{key_1}, KC_{key_2}, KC_{key_3})".to_string());
+    len_func_mappings.insert(4, "SEQ_FOUR_KEYS(KC_{key_1}, KC_{key_2}, KC_{key_3}, KC_{key_4})".to_string());
+    len_func_mappings.insert(5, "SEQ_FIVE_KEYS(KC_{key_1}, KC_{key_2}, KC_{key_3}, KC_{key_4}, KC_{key_5})".to_string());
 
     for (seq, name) in decoded.mappings {
         let macro_str = len_func_mappings.get(&(seq.len())).unwrap();
