@@ -13,12 +13,25 @@ defined in `emotes`, ex. `fca = 'FLAG_CA'`.
 
 ## Running it
 For now, you'll need to change config.toml in this directory to include whatever
-you want, and then run `cargo build --release;
-./target/release/qmk_emote_macro_generator > emotes.h`, copy `emotes.h` to your
-QMK keymap directory, and `#include "emotes.h"` in your `keymap.c`. This is a
-little hacky for now, but I'm working on it.
+you want, and then run either of the following:
 
-Docker images and AUR packages inbound... eventually.
+```sh
+# EITHER both of these lines
+cargo build --release
+./target/release/qmk_emote_macro_generator > emotes.h
+
+# OR both of these lines
+docker build -t qmk_emote_macro_generator:latest .
+docker run -t qmk_emote_macro_generator > emotes.h
+```
+
+Then, copy `emotes.h` to your QMK keymap directory, and `#include "emotes.h"` in
+your `keymap.c`. This is a little hacky for now, but I'm working on it.
+
+The Docker image right now needs to be built locally due to the hard path
+dependency on `config.toml`, but once the config file can live anywhere, I'll
+publish the image to Docker Hub and that line will clean up significantly. AUR
+packages inbound... eventually.
 
 ## Example Config
 ```toml
